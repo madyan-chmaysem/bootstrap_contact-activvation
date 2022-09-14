@@ -52,3 +52,28 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+const submit=document.getElementById("submitButton")
+console.log(submit)
+submit.addEventListener("click",()=>{
+    console.log(submit)
+    
+
+    const name=document.getElementById("name")
+    const email=document.getElementById("email")
+    const tel=document.getElementById("phone")
+    const message=document.getElementById("message")
+    const urll="http://localhost/startbootstrap-freelancer-gh-pages/startbootstrap-freelancer-gh-pages/phpfiles/addinfo.php/?"
+    fetch(urll,{
+        method: 'POST',
+        body :new URLSearchParams({ "name" : name.value, "email":email.value ,"phonenb": tel.value ,"messages":message.value}),
+    })
+  
+
+
+
+
+
+
+
+})
+

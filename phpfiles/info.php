@@ -3,14 +3,15 @@
 Include CORS - how ? Allow Headers! 
 */
 
+
 include("conection.php");
 
-$query = $mysqli->prepare("SELECT messages FROM `info`");
+$query = $mysqli->prepare("SELECT * FROM `info`");
 $query->execute();
 $array = $query->get_result();
 
 $response = [];
-
+ 
 while($a = $array->fetch_assoc()){
     $response[] = $a;
 }
